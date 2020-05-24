@@ -3,6 +3,10 @@ package com.srihari.threads.multithreading.racecondition.solution.confinement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Confinement is like, every thread should have it's own 'DownloadStatus' instance
+ * at the end, the main thread can combine the results
+ */
 public class RaceConditionApplication {
     public static void main(String[] args) {
         List<Thread> threads = new ArrayList<>();
