@@ -1,4 +1,4 @@
-package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate;
+package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate.usingvolatile;
 
 public class RaceConditionApplication {
     public static void main(String[] args) {
@@ -6,6 +6,7 @@ public class RaceConditionApplication {
 
         Thread thread1 = new Thread(new DownloadFileTask(status));
         Thread thread2 = new Thread(() -> {
+            // It wastes CPU cycles
             while(!status.isDone()) {}      // it waits for status to be done
                                             // but since status is cached in local memory of thread, the status set to done by other thread is not vsble here
                                             // Hence this while loop run infinitely

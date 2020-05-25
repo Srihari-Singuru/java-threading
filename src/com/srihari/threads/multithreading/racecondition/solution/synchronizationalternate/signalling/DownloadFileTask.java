@@ -1,4 +1,4 @@
-package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate;
+package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate.signalling;
 
 public class DownloadFileTask implements Runnable {
     private final DownloadStatus status;
@@ -21,6 +21,11 @@ public class DownloadFileTask implements Runnable {
         }
         // set the status to done
         status.done();
+
+        synchronized (status) { // like 'wait', jvm expects us to keep 'notify' inside synchronized block
+            status.notifyAll();    // need to inform other thread (that used status.wait())
+            //status.notify(); // if only one thread is waiting for this 'status' object
+        }
 
         System.out.println("Downloading completed. Thread Name: "+Thread.currentThread().getName());
     }
