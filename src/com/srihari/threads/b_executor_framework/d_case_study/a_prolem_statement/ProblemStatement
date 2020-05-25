@@ -1,0 +1,19 @@
+# Best Price Finder - Case study
+
+We need to search in multiple websites, and get the results from multiple sites and display it
+Also, display the time taken overall
+
+Query all the sites simultaneously
+Whenever any site's result is ready, then display it
+finally display total time taken
+
+
+Example:
+
+Getting a quote from site1
+Getting a quote from site2
+Getting a quote from site3
+Quote{site='site3', price=102}
+Quote{site='site2', price=106}
+Quote{site='site1', price=100}
+Retrieved all quotes in 2757 msec
