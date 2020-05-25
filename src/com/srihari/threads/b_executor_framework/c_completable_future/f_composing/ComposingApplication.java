@@ -10,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
  */
 public class ComposingApplication {
     public static void main(String[] args) {
-        getUserEmailAsync()
+        getUserEmailAsync()         // after this thread completes, next thread (next line) will be invoked
                 .thenCompose(ComposingApplication::getUserPlaylistAsync)    // pass a Function, which returns CompletionStage
                 .thenAccept(System.out::println);
 
