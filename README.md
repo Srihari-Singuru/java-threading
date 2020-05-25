@@ -11,3 +11,4 @@ Strategies to resolve
 5. Partitioning
     
 Visibility problem - Modifications on shared location by one thread is ot visible to other threads
+1. Volatile
