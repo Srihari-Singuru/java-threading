@@ -1,4 +1,4 @@
-package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate.usingvolatile;
+package com.srihari.threads.multithreading.racecondition.solution.synchronizationalternate.a_usingvolatile;
 
 /**
  * volatile soles the 'visibility problem'
